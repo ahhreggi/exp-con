@@ -43,15 +43,25 @@ const Perks = (props) => {
 
   return (
     <div className="Perks">
+
+      {/* Nav Bar */}
       <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
+
+      {/* Main Content */}
       <main>
+
+        {/* Section Text */}
         <div className="title">
           <h1>PERKS</h1>
         </div>
+
+        {/* PerkItem Components */}
         <section className="perks">
           {perks}
         </section>
+
       </main>
+
     </div>
   );
 };

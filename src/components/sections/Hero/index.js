@@ -11,6 +11,7 @@ const images = {
 };
 
 const Hero = (props) => {
+
   Hero.propTypes = {
     setView: PropTypes.func
   };
@@ -19,7 +20,7 @@ const Hero = (props) => {
     image: 1
   });
 
-  // Run a default slideshow timer
+  // Default slideshow timer
   let timer;
   useEffect(() => {
     timer = setTimeout(() => {
@@ -36,16 +37,21 @@ const Hero = (props) => {
 
   return (
     <div className="Hero" style={{backgroundImage: `url(${images[state.image]})`}}>
+
+      {/* Nav Bar */}
       <Nav setView={props.setView} />
+
+      {/* Main Content */}
       <main>
-        <h1>
-          INTERACTIVE CONCERT EXPERIENCE
-        </h1>
-        <h3>
-          Experience your favourite artists like never before and from the comfort of your own home.
-        </h3>
+
+        {/* Section Text */}
+        <h1>INTERACTIVE CONCERT EXPERIENCE</h1>
+        <h3>Experience your favourite artists like never before and from the comfort of your own home.</h3>
         <Button text="TRY IT NOW" styles="bg-rainbow large" onClick={() => props.setView("pricing")} />
+
       </main>
+
+      {/* Slideshow Controls */}
       <div className="controls">
         <div
           className={`control-button ${state.image === 1 ? "active" : ""}`}
@@ -60,6 +66,7 @@ const Hero = (props) => {
           onClick={() => selectImage(3)}
         />
       </div>
+
     </div>
   );
 };
