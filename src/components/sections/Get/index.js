@@ -26,10 +26,12 @@ const Get = (props) => {
 
         {/* Try It Now Button */}
         <div className="right">
-          <Button text="TRY IT NOW" styles="bg-rainbow" />
+          <Button text="TRY IT NOW" styles="bg-rainbow xlarge" onClick={() => props.setView("pricing")} />
         </div>
 
       </main>
+
+      <div/>
 
     </div>
   );

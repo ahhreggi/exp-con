@@ -2,7 +2,7 @@
 
 .Get {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 80vh;
   @include flex-center;
   flex-direction: column;
   justify-content: space-between;
@@ -10,8 +10,10 @@
   main {
     @include flex-center;
     justify-content: space-between;
-    flex-direction: column;
     width: 82%;
-    margin: 0 3rem;
+    margin: 0 3rem 8rem 3rem;
+    h1 {
+      color: $red;
+    }
   }
 }
