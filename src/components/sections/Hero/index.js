@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import "./index.scss";
 import Button from "../../Button";
+import Nav from "../../Nav";
 
 const images = {
   1: "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
@@ -35,7 +36,7 @@ const Hero = (props) => {
 
   return (
     <div className="Hero" style={{backgroundImage: `url(${images[state.image]})`}}>
-      <div />
+      <Nav setView={props.setView} />
       <main>
         <h1>
           INTERACTIVE CONCERT EXPERIENCE
