@@ -21,27 +21,6 @@
     height: 5rem;
     width: 18rem;
   }
-  &.blue {
-    color: $blue;
-  }
-  &.yellow {
-    color: $yellow;
-  }
-  &.red {
-    color: $red;
-  }
-  &.bg-rainbow {
-    background: linear-gradient(to right, $blue, $purple, $red, $yellow);
-  }
-  &.bg-blue {
-    background-color: $blue;
-  }
-  &.bg-yellow {
-    background-color: $yellow;
-  }
-  &.bg-red {
-    background-color: $red;
-  }
   &:hover {
     cursor: pointer;
   }

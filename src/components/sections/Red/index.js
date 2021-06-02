@@ -10,12 +10,12 @@ const Red = (props) => {
   };
   return (
     <div className="Red">
-      <Nav showButton={true} styles="red" setView={props.setView} />
+      <Nav showButton={true} styles="color-red" setView={props.setView} />
       <main>
         <section className="left">
           <h1>SUPERIOR SOUND</h1>
           <h2>Experience live versions of your favourite songs.</h2>
-          <Button text="SEE DEMO" styles="large red" />
+          <Button text="SEE DEMO" styles="large color-red" />
         </section>
         <section className="right">
           <div className="speaker">
