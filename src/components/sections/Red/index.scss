@@ -9,6 +9,8 @@
   background-color: $red;
   main {
     @include flex-center;
+    justify-content: space-between;
+    width: 86%;
     margin-top: 3rem;
     h1 {
       color: $white;
@@ -26,7 +28,7 @@
     margin-left: 2rem;
   }
   section.right {
-    margin-left: 10rem;
+    margin-left: 3rem;
     padding-bottom: 8rem;
     @include flex-center;
     align-items: flex-start;
