@@ -12,21 +12,50 @@ const Hero = () => {
   const [state, setState] = useState({
     image: 1
   });
+
+  // Run a default slideshow timer
+  let timer;
   useEffect(() => {
-    setTimeout(() => {
+    timer = setTimeout(() => {
       const nextImage = state.image === 3 ? 1 : state.image + 1;
       setState({ ...state, image: nextImage});
     }, 5000);
   }, [state.image]);
+
+  // Stop the current slideshow timer when an image is manually selected
+  const selectImage = (image) => {
+    clearTimeout(timer);
+    setState({ image: image });
+  };
+
   return (
     <div className="Hero" style={{backgroundImage: `url(${images[state.image]})`}}>
-      <h1>
-        INTERACTIVE CONCERT EXPERIENCE
-      </h1>
-      <h3>
-        Experience your favourite artists like never before and from the comfort of your own home.
-      </h3>
-      <Button text="TRY IT NOW" styles="bg-rainbow large" />
+      <div />
+      <main>
+        <h1>
+          INTERACTIVE CONCERT EXPERIENCE
+        </h1>
+        <h3>
+          Experience your favourite artists like never before and from the comfort of your own home.
+        </h3>
+        <Button text="TRY IT NOW" styles="bg-rainbow large" />
+      </main>
+      <div className="controls">
+        <div
+          className={`control-button ${state.image === 1 ? "active" : ""}`}
+          onClick={() => selectImage(1)}
+        />
+        <div
+          className={`control-button ${state.image === 2 ? "active" : ""}`}
+          onClick={() => selectImage(2)}
+
+        />
+        <div
+          className={`control-button ${state.image === 3 ? "active" : ""}`}
+          onClick={() => selectImage(3)}
+
+        />
+      </div>
     </div>
   );
 };
