@@ -1,0 +1,27 @@
+@import "../styles/global.scss";
+
+.Nav {
+  margin-top: 2rem;
+  width: 100%;
+  @include flex-center;
+  justify-content: space-between;
+  i {
+    color: $white;
+    font-size: 3.3rem;
+    transform: scaleX(1.5);
+    margin: 1.3rem 3rem 0;
+  }
+  h2 {
+    color: $white;
+    font-weight:  400;
+    letter-spacing: 0.2rem;
+  }
+  section.nav-left {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+  }
+  section.nav-right {
+    margin-right: 4rem;
+  }
+}
