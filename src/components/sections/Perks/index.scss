@@ -1,0 +1,21 @@
+@import "../../../styles/global.scss";
+
+.Perks {
+  min-width: 100vw;
+  min-height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $white;
+  .PerkItem {
+    border: 1px solid red;
+    max-width: 25rem;
+    h2 {
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+    }
+    h3 {
+      max-width: 24rem;
+    }
+  }
+}
