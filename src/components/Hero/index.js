@@ -1,3 +1,5 @@
+import "./index.scss";
+
 const Hero = () => {
   return (
     <div className="Hero">
