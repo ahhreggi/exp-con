@@ -1,0 +1,40 @@
+@import "../../../styles/global.scss";
+
+@import "../../../styles/global.scss";
+
+.Review {
+  min-width: 100vw;
+  min-height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $white;
+  main {
+    @include flex-center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 82%;
+    margin: 0 3rem;
+    .title {
+      align-self: flex-start;
+      margin-bottom: 3rem;
+    }
+  }
+  section.reviews {
+    @include flex-center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8rem;
+  }
+  .ReviewItem {
+    max-width: 25rem;
+    h2 {
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+    }
+    h3 {
+      max-width: 24rem;
+    }
+    margin-right: 2rem;
+  }
+}
