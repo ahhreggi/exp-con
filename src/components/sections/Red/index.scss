@@ -1,7 +1,39 @@
 @import "../../../styles/global.scss";
 
 .Red {
+  @include flex-center;
   min-width: 100vw;
   min-height: 100vh;
-  @include flex-center;
+  background-color: $red;
+  main {
+    margin-top: 6rem;
+    h1 {
+      color: $white;
+    }
+    h2 {
+      max-width: 55rem;
+    }
+    .Button {
+      margin-top: 2.5rem;
+    }
+  }
+  section.interactive {
+    margin-left: 10rem;
+    @include flex-center;
+    align-items: flex-start;
+    filter: drop-shadow(0px 25px 25px $red-shadow);
+    .speaker {
+      &:nth-child(2) {
+        margin: 13rem 0 0 4rem;
+        transform: scaleX(-1);
+      }
+      ::before {
+        mix-blend-mode: multiply;
+      }
+    }
+    .Button {
+      position: absolute;
+      margin-top: 35rem;
+    }
+  }
 }
