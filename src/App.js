@@ -1,7 +1,23 @@
+import { useState } from "react";
+import Hero from "./components/sections/Hero";
+import "./App.scss";
+
 const App = () => {
+  const [state, setState] = useState({
+    view: "main" // main, pricing
+  });
+  // Set the current view
+  const setView = (view) => {
+    setState({ ...state, view: view });
+  };
   return (
     <div className="App">
-
+      {state.view === "main" &&
+        <Hero setView={setView} />
+      }
+      {state.view === "pricing" &&
+        <div>PRICING</div>
+      }
     </div>
   );
 };

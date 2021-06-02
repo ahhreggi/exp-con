@@ -1,0 +1,48 @@
+@import "../styles/global.scss";
+
+.Button {
+  color: $white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: $white;
+  border-radius: 20rem;
+  height: 2.4rem;
+  width: 9.2rem;
+  margin: 1.5rem 0;
+  letter-spacing: 0.18rem;
+  user-select: none;
+  @include flex-center;
+  span {
+    transform: scale(1, 0.9);
+    padding-bottom: 0.3rem;
+  }
+  &.large {
+    font-size: 1.5rem;
+    height: 5rem;
+    width: 18rem;
+  }
+  &.blue {
+    color: $blue;
+  }
+  &.yellow {
+    color: $yellow;
+  }
+  &.red {
+    color: $red;
+  }
+  &.bg-rainbow {
+    background: linear-gradient(to right, $blue, $purple, $red, $yellow);
+  }
+  &.bg-blue {
+    background-color: $blue;
+  }
+  &.bg-yellow {
+    background-color: $yellow;
+  }
+  &.bg-red {
+    background-color: $red;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

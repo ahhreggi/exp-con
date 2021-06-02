@@ -1,0 +1,6 @@
+@import "./styles/global.scss";
+
+.App {
+  background-color: $grey;
+  @include flex-center;
+}
