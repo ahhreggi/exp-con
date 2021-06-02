@@ -4,10 +4,43 @@ import Nav from "../../Nav";
 import PerkItem from "./PerkItem";
 
 const Perks = (props) => {
+
   Perks.propTypes = {
     setView: PropTypes.func
   };
+
   const fillerText = "No commitment, cancel anytime. Never worry about forgetting a payment again!";
+
+  const perksData = [
+    {
+      title: "Subscription Payment Model",
+      text: fillerText,
+      styles: "color-red"
+    },
+    {
+      title: "No Fee Cancellation Policy",
+      text: fillerText,
+      styles: "color-blue"
+    },
+    {
+      title: "Subscription Payment Model",
+      text: fillerText,
+      styles: "color-yellow"
+    },
+  ];
+
+  // Create PerkItem components
+  const perks = perksData.map((perk, index) => {
+    return (
+      <PerkItem
+        key={index}
+        title={perk.title}
+        text={perk.text}
+        styles={perk.styles}
+      />
+    );
+  });
+
   return (
     <div className="Perks">
       <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
@@ -16,21 +49,7 @@ const Perks = (props) => {
           <h1>PERKS</h1>
         </div>
         <section className="perks">
-          <PerkItem
-            title={"Subscription Payment Model"}
-            text={fillerText}
-            styles="color-red"
-          />
-          <PerkItem
-            title={"No Fee Cancellation Policy"}
-            text={fillerText}
-            styles="color-blue"
-          />
-          <PerkItem
-            title={"Subscription Payment Model"}
-            text={fillerText}
-            styles="color-yellow"
-          />
+          {perks}
         </section>
       </main>
     </div>
