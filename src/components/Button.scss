@@ -1,0 +1,39 @@
+@import "../styles/global.scss";
+
+.Button {
+  color: $white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: $white;
+  height: 2.4rem;
+  width: 9.2rem;
+  border-radius: 20rem;
+  @include flex-center;
+  letter-spacing: 1px;
+  &.large {
+    font-size: 0.85rem;
+    height: 3rem;
+    width: 12.6rem;
+  }
+  &.blue {
+    color: $blue;
+  }
+  &.yellow {
+    color: $yellow;
+  }
+  &.red {
+    color: $red;
+  }
+  &.bg-rainbow {
+    background: linear-gradient(to right, $blue, $purple, $red, $yellow);
+  }
+  &.bg-blue {
+    background-color: $blue;
+  }
+  &.bg-yellow {
+    background-color: $yellow;
+  }
+  &.bg-red {
+    background-color: $red;
+  }
+}
