@@ -8,6 +8,7 @@ const PerkItem = (props) => {
   };
   return (
     <div className="PerkItem">
+      <div className={`line ${props.styles}`} />
       <h2 className={props.styles}>
         {props.title}
       </h2>

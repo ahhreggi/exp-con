@@ -7,8 +7,25 @@
   flex-direction: column;
   justify-content: space-between;
   color: $white;
+  main {
+    @include flex-center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 82%;
+    margin: 0 3rem;
+    .title {
+      align-self: flex-start;
+      margin-bottom: 3rem;
+    }
+  }
+  section.perks {
+    @include flex-center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8rem;
+  }
   .PerkItem {
-    border: 1px solid red;
+    // border: 1px solid red;
     max-width: 25rem;
     h2 {
       font-weight: 600;
@@ -16,6 +33,11 @@
     }
     h3 {
       max-width: 24rem;
+    }
+    .line {
+      width: 7rem;
+      border-bottom: 0.2rem solid;
+      margin-bottom: 1rem;
     }
   }
 }
