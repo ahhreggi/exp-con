@@ -5,6 +5,7 @@
   width: 100%;
   @include flex-center;
   justify-content: space-between;
+  min-height: 8rem;
   i {
     color: $white;
     font-size: 3.3rem;
