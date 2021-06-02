@@ -1,0 +1,6 @@
+@import "../../../styles/global.scss";
+
+.Hero {
+  @include flex-center;
+  flex-direction: column;
+}

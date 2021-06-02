@@ -4,7 +4,9 @@ import Button from "../../Button";
 const Hero = () => {
   return (
     <div className="Hero">
-      Hero component
+      <div className="title">
+        INTERACTIVE CONCERT EXPERIENCE
+      </div>
       <Button text="TRY IT NOW" styles="bg-rainbow" />
     </div>
   );

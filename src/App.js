@@ -1,4 +1,5 @@
 import Hero from "./components/sections/Hero";
+import "./App.scss";
 
 const App = () => {
   return (
