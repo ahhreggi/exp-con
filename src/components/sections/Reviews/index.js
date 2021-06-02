@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import "./index.scss";
 import Nav from "../../Nav";
 import ReviewItem from "./ReviewItem";
+import speaker from "../../../images/speaker2.png";
 
 const Reviews = (props) => {
 
@@ -42,7 +43,7 @@ const Reviews = (props) => {
   });
 
   return (
-    <div className="Perks">
+    <div className="Reviews">
 
       {/* Nav Bar */}
       <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
@@ -50,15 +51,23 @@ const Reviews = (props) => {
       {/* Main Content */}
       <main>
 
-        {/* Section Text */}
-        <div className="title">
-          <h1>REVIEWS</h1>
-        </div>
-
-        {/* ReviewItem Components */}
-        <section className="reviews">
-          {reviews}
+        {/* Images */}
+        <section className="left">
+          <img src={speaker} />
+          <img src={speaker} />
         </section>
+
+        {/* Section Text */}
+        <section className="right">
+          <div className="title">
+            <h1>REVIEWS</h1>
+          </div>
+          {/* ReviewItem Components */}
+          <section className="reviews">
+            {reviews}
+          </section>
+        </section>
+
 
       </main>
 
