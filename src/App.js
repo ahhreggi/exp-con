@@ -3,6 +3,7 @@ import Hero from "./components/sections/Hero";
 import Red from "./components/sections/Red";
 import Perks from "./components/sections/Perks";
 import Reviews from "./components/sections/Reviews";
+import Get from "./components/sections/Get";
 import "./App.scss";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Red setView={setView} />
           <Perks setView={setView} />
           <Reviews setView={setView} />
+          <Get setView={setView} />
         </>
       }
       {state.view === "pricing" &&
