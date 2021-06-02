@@ -3,4 +3,5 @@
 .App {
   background-color: $grey;
   @include flex-center;
+  flex-direction: column;
 }

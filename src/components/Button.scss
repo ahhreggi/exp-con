@@ -45,4 +45,12 @@
   &:hover {
     cursor: pointer;
   }
+  &.circle {
+    background-color: transparent;
+    border: 3px solid $white;
+    height: 7.75rem;
+    width: 8rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
 }
