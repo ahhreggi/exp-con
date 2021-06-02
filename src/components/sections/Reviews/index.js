@@ -10,7 +10,7 @@ const Reviews = (props) => {
     setView: PropTypes.func
   };
 
-  const fillerText = "No commitment, cancel anytime. Never worry about forgetting a payment again!";
+  const fillerText = "Love it, it's the best. I can't live without it!";
 
   const reviewData = [
     {
@@ -46,7 +46,7 @@ const Reviews = (props) => {
     <div className="Reviews">
 
       {/* Nav Bar */}
-      <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
+      <Nav showButton={true} styles="color-blue" setView={props.setView} />
 
       {/* Main Content */}
       <main>

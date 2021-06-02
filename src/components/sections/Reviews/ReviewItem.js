@@ -6,9 +6,13 @@ const ReviewItem = (props) => {
     author: PropTypes.string,
     text: PropTypes.string
   };
+  const stars = [];
+  for (let index = 0; index < props.rating; index++) {
+    stars.push(<i key={index} className="fa fa-star" />);
+  }
   return (
     <div className="ReviewItem">
-      {props.rating}
+      {stars}
       <h2>
         {props.author.toUpperCase()}
       </h2>
