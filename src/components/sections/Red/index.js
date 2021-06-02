@@ -11,7 +11,7 @@ const Red = (props) => {
       <h2>Experience live versions of your favourite songs.</h2>
       <Button text="SEE DEMO" styles="large red" />
     </div>
-  )
+  );
 };
 
 export default Red;
