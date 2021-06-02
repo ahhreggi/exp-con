@@ -13,7 +13,7 @@ const Get = (props) => {
     <div className="Get">
 
       {/* Nav Bar */}
-      <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
+      <Nav />
 
       {/* Main Content */}
       <main>
@@ -35,4 +35,4 @@ const Get = (props) => {
   );
 };
 
-export default Perks;
+export default Get;
