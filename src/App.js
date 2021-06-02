@@ -6,9 +6,18 @@ const App = () => {
   const [state, setState] = useState({
     view: "main" // main, pricing
   });
+  // Set the current view
+  const setView = (view) => {
+    setState({ ...state, view: view });
+  };
   return (
     <div className="App">
-      <Hero />
+      {state.view === "main" &&
+        <Hero setView={setView} />
+      }
+      {state.view === "pricing" &&
+        <div>PRICING</div>
+      }
     </div>
   );
 };
