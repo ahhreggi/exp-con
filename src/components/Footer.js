@@ -11,11 +11,23 @@ const Footer = () => {
     <div className="Footer">
 
       <div className="contact">
+        <span>
+          <i className="fa fa-envelope" />
+          support@experienceconcerts.co
+        </span>
+      </div>
 
+      <div className="copyright">
+        <h2>
+          EXP | CON
+        </h2>
+        <div>
+          2019 &copy; All Rights Reserved | Speer Technologies Incorporated
+        </div>
       </div>
 
     </div>
   );
 };
 
-export default Get;
+export default Footer;
