@@ -1,0 +1,17 @@
+@import "../../../styles/global.scss";
+
+.Get {
+  min-width: 100vw;
+  min-height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $white;
+  main {
+    @include flex-center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 82%;
+    margin: 0 3rem;
+  }
+}
