@@ -4,6 +4,7 @@ import Red from "./components/sections/Red";
 import Perks from "./components/sections/Perks";
 import Reviews from "./components/sections/Reviews";
 import Get from "./components/sections/Get";
+import Footer from "./components/Footer";
 import "./App.scss";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
 
   return (
     <div className="App">
+
       {state.view === "main" &&
         <>
           <Hero setView={setView} />
@@ -28,9 +30,13 @@ const App = () => {
           <Get setView={setView} />
         </>
       }
+
       {state.view === "pricing" &&
         <div>PRICING</div>
       }
+
+      <Footer />
+
     </div>
   );
 };
