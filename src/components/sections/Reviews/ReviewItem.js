@@ -6,10 +6,18 @@ const ReviewItem = (props) => {
     author: PropTypes.string,
     text: PropTypes.string
   };
+
+  // Create star elements for the review rating including halves
   const stars = [];
-  for (let index = 0; index < props.rating; index++) {
+  const full = Math.floor(props.rating);
+  const half = props.rating - full > 0;
+  for (let index = 0; index < full; index++) {
     stars.push(<i key={index} className="fa fa-star" />);
   }
+  if (half) {
+    stars.push(<i className="fa fa-star-half" />);
+  }
+
   return (
     <div className="ReviewItem">
       {stars}
