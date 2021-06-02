@@ -3,4 +3,5 @@
 .App {
   height: 100vh;
   background-color: $grey;
+  @include flex-center;
 }

@@ -5,11 +5,16 @@
   font-size: 0.7rem;
   font-weight: 600;
   background-color: $white;
+  border-radius: 20rem;
   height: 2.4rem;
   width: 9.2rem;
-  border-radius: 20rem;
-  @include flex-center;
+  margin: 1rem 0;
   letter-spacing: 1px;
+  user-select: none;
+  @include flex-center;
+  span {
+    transform: scale(1, 0.9);
+  }
   &.large {
     font-size: 0.85rem;
     height: 3rem;
@@ -35,5 +40,8 @@
   }
   &.bg-red {
     background-color: $red;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }

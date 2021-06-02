@@ -12,7 +12,7 @@ const Button = (props) => {
       className={`Button ${props.styles}`}
       onClick={() => props.onClick()}
     >
-      {props.text}
+      <span>{props.text}</span>
     </div>
   );
 };
