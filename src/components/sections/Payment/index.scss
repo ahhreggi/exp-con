@@ -1,0 +1,11 @@
+@import "../../../styles/global.scss";
+
+.Payment {
+  min-width: 100vw;
+  min-height: 100vh;
+  @include flex-center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $black;
+  background-color: $white;
+}
