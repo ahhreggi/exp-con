@@ -3,11 +3,20 @@ import PropTypes from "prop-types";
 import "./index.scss";
 import Nav from "../../Nav";
 import Button from "../../Button";
+import RadioButton from "./RadioButton";
 
 const Payment = (props) => {
 
   Payment.propTypes = {
     setView: PropTypes.func
+  };
+
+  const [state, setState] = useState({
+    plan: null
+  });
+
+  const selectPlan = (plan) => {
+    setState({ ...state, plan: plan });
   };
 
   return (
@@ -25,7 +34,24 @@ const Payment = (props) => {
         <div className="step-one">
           <h3>1. Select your plan</h3>
           <div className="plans">
-
+            <RadioButton
+              label="BASIC"
+              selected={state.plan === "BASIC"}
+              styles="red"
+              onClick={selectPlan}
+            />
+            <RadioButton
+              label="ADVANCED"
+              selected={state.plan === "ADVANCED"}
+              styles="yellow"
+              onClick={selectPlan}
+            />
+            <RadioButton
+              label="PRO"
+              selected={state.plan === "PRO"}
+              styles="blue"
+              onClick={selectPlan}
+            />
           </div>
         </div>
 
