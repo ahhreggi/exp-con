@@ -20,7 +20,7 @@ const App = () => {
     if (view === "perks") {
       scrollTo("perks");
     } else {
-      window.scrollTo({top: 0});
+      window.scrollTo({ top: 0 });
       setState({ ...state, view: view });
     }
   };

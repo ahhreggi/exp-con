@@ -26,6 +26,11 @@ const Nav = (props) => {
     console.log("click~");
   };
 
+  const handleClick = (view) => {
+    props.setView(view);
+    toggleMenu();
+  };
+
   return (
     <div className="Nav">
 
@@ -34,13 +39,13 @@ const Nav = (props) => {
         </div>
         <div className="menu">
           <div className={`nav-item ${props.section === "info" ? "active" : ""}`}>
-            <h1 onClick={() => props.setView("main")}>WHAT IS IT</h1>
+            <h1 onClick={() => handleClick("main")}>WHAT IS IT</h1>
           </div>
           <div className={`nav-item ${props.section === "perks" ? "active" : ""}`}>
-            <h1 onClick={() => props.setView("perks")}>PERKS</h1>
+            <h1 onClick={() => handleClick("perks")}>PERKS</h1>
           </div>
           <div className={`nav-item ${props.section === "pricing" ? "active" : ""}`}>
-            <h1 onClick={() => props.setView("pricing")}>PRICING</h1>
+            <h1 onClick={() => handleClick("pricing")}>PRICING</h1>
           </div>
         </div>
       </div>
@@ -51,7 +56,7 @@ const Nav = (props) => {
 
       <section className="nav-right">
         {props.showButton &&
-          <Button text="TRY IT NOW" styles={props.styles} onClick={() => props.setView("pricing")} />
+          <Button text="TRY IT NOW" styles={props.styles} onClick={() => handleClick("pricing")} />
         }
 
       </section>
