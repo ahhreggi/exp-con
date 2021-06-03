@@ -14,9 +14,9 @@ const Yellow = (props) => {
     showImage1: false
   });
 
-  const showImage = (image) => {
+  const showImage = (image, hide = false) => {
     const key = "showImage" + image;
-    setState({ ...state, [key]: true });
+    setState({ ...state, [key]: !hide });
   };
 
   return (
@@ -30,12 +30,16 @@ const Yellow = (props) => {
 
         {/* Interactive Area */}
         <section className="demo-interactive">
-          {!state.showImage1 &&
-            <div className="reveal1">
-              <Button text="REVEAL" styles="circle" onClick={() => showImage(1)} />
-              <div className={`cover1 ${state.showImage1 ? "show" : ""}`} />
-            </div>
-          }
+          <div className={`reveal1 ${state.showImage1 ? "invert" : ""}`}>
+            <Button
+              text="REVEAL"
+              styles="circle"
+              onMouseOver={() => showImage(1)}
+              onMouseOut={() => showImage(1, true)}
+            />
+            <div className={`cover1 ${state.showImage1 ? "show" : ""}`} />
+          </div>
+
           <div className="circle1" />
         </section>
 
