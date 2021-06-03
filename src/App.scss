@@ -26,4 +26,30 @@
       }
     }
   }
+
+  :not(.view-pricing) .Perks,
+  .Get,
+  .Pricing {
+    .nav-bg {
+      background-color: $blue;
+    }
+    .nav-item.active,
+    .nav-item:hover {
+      color: $grey;
+    }
+  }
+  .Yellow {
+    .nav-item.active,
+    .nav-item:hover {
+      color: $yellow;
+    }
+  }
+
+  .Hero,
+  .Reviews {
+    .nav-item.active,
+    .nav-item:hover {
+      color: $blue;
+    }
+  }
 }
