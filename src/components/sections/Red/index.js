@@ -51,7 +51,7 @@ const Red = (props) => {
           <div className="speaker">
             <img src={speaker} />
           </div>
-          <Button text={state.playAudio ? "STOP" : "CLICK"} styles="circle" onClick={() => toggleAudio()} />
+          <Button text={"CLICK"} styles="circle" onClick={() => toggleAudio()} />
         </section>
 
       </main>
