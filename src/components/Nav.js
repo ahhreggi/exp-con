@@ -23,7 +23,6 @@ const Nav = (props) => {
 
   const toggleMenu = () => {
     setState({ showMenu: !state.showMenu });
-    console.log("click~");
   };
 
   const handleClick = (view) => {

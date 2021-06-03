@@ -13,7 +13,7 @@
     width: 80%;
     margin: auto;
     h1 {
-      margin-bottom: 3rem;
+      margin: 5rem 0;
     }
     h3 {
       font-weight: 400;
@@ -47,11 +47,15 @@
       margin-left: 2.5rem;
     }
     .submit {
-      margin-top: 5rem;
+      margin: 5rem 0 10rem 2.3rem;
       width: 47%;
-      a {
-        color: $purple;
-        font-weight: 800;
+      div {
+        font-size: 1.2rem;
+        max-width: 31rem;
+        a {
+          color: $purple;
+          font-weight: 800;
+        }
       }
     }
     .RadioButton {
@@ -119,7 +123,7 @@
         outline: 2px solid $black;
         border: none;
         border-radius: 0;
-        height: 3.2rem;
+        height: 3.5rem;
         width: inherit;
         box-sizing: border-box;
         padding: 0 1rem;

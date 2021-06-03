@@ -32,7 +32,6 @@ const Payment = (props) => {
 
   const updateField = (field, value) => {
     setState({ ...state, [field]: value });
-    console.log(state);
   };
 
   const countries = ["United States", "Canada", "Mexico"];
