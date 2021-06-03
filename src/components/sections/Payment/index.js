@@ -81,8 +81,10 @@ const Payment = (props) => {
             <div className="fields">
               <InputField label="Full Name" field="fullName" value={state.fullName} onChange={updateField} />
               <InputField label="Billing Address" field="billingAddress" value={state.billingAddress} onChange={updateField} />
-              <InputField label="City" field="city" value={state.city} onChange={updateField} />
-              <InputField label="Postal Code" field="postalCode" value={state.postalCode} onChange={updateField} />
+              <div className="row">
+                <InputField label="City" field="city" value={state.city} onChange={updateField} />
+                <InputField label="Postal Code" field="postalCode" value={state.postalCode} onChange={updateField} />
+              </div>
               <InputField label="Country" field="country" value={state.country} onChange={updateField} dropdown={true} options={countries} />
             </div>
           </div>
@@ -91,8 +93,10 @@ const Payment = (props) => {
             <div className="fields">
               <InputField label="Cardholder's Name" field="cardholderName" value={state.cardholderName} onChange={updateField} />
               <InputField label="Card Number" field="cardNumber" value={state.cardNumber} onChange={updateField} />
-              <InputField label="Expiry Month" field="expiryMonth" value={state.country} onChange={updateField} dropdown={true} options={expiryMonths} />
-              <InputField label="Expiry Year" field="expiryMonth" value={state.country} onChange={updateField} dropdown={true} options={expiryYears} />
+              <div className="row">
+                <InputField label="Expiry Month" field="expiryMonth" value={state.expiryMonth} onChange={updateField} dropdown={true} options={expiryMonths} />
+                <InputField label="Expiry Year" field="expiryMonth" value={state.expiryYear} onChange={updateField} dropdown={true} options={expiryYears} />
+              </div>
               <InputField label="CVV" field="cvv" value={state.cvv} onChange={updateField} />
             </div>
           </div>

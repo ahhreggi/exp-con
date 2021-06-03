@@ -7,17 +7,21 @@ const InputField = (props) => {
     value: PropTypes.string,
     onChange: PropTypes.func,
     dropdown: PropTypes.bool,
-    options: PropTypes.array
+    options: PropTypes.array,
+    styles: PropTypes.string
   };
   InputField.defaultProps = {
     dropdown: false,
     options: []
   };
-  const options = props.options.map(opt => {
-    return <option key={opt} value={opt}>{opt}</option>;
-  });
+  let options;
+  if (props.options) {
+    options = props.options.map(opt => {
+      return <option key={opt} value={opt}>{opt}</option>;
+    });
+  }
   return (
-    <div className="InputField">
+    <div className={`InputField ${props.styles}`}>
       <div className="label">{props.label}</div>
       {!props.dropdown &&
         <input value={props.value} onChange={(event) => props.onChange(props.field, event.target.value)} />

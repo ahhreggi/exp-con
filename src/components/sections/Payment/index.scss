@@ -107,6 +107,39 @@
         }
       }
     }
+    .InputField {
+      // border: 1px solid red;
+      width: 100%;
+      .label {
+        text-transform: uppercase;
+        font-weight: 800;
+        margin: 1.5rem 0 0.5rem 0;
+      }
+      input,
+      select {
+        outline: 2px solid $black;
+        // border: 4px solid transparent;
+        border: none;
+        border-radius: 0;
+        height: 3.2rem;
+        width: inherit;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        font-size: 1.3rem;
+        &:focus {
+          // border-bottom: 4px solid $purple;
+          box-shadow: 0 -0.3rem $purple inset;
+        }
+      }
+    }
+    .row {
+      @include flex-center;
+      .InputField {
+        &:last-child {
+          margin-left: 2rem;
+        }
+      }
+    }
   }
 
 }
