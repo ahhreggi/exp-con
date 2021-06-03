@@ -57,20 +57,21 @@ const Pricing = (props) => {
   ];
 
   // Create PerkItem components
-  const pricing = pricingData.map((package, index) => {
+  const pricing = pricingData.map((item, index) => {
     return (
       <PricingItem
         key={index}
-        package={package.package}
-        timeframe={package.timeframe}
-        price={package.price}
-        info={package.info}
+        package={item.package}
+        timeframe={item.timeframe}
+        price={item.price}
+        info={item.info}
+        styles={item.styles}
       />
     );
   });
 
   return (
-    <div className="Perks">
+    <div className="Pricing">
 
       {/* Nav Bar */}
       <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
@@ -84,7 +85,7 @@ const Pricing = (props) => {
         </div>
 
         {/* PricingItem Components */}
-        <section className="perks">
+        <section className="packages">
           {pricing}
         </section>
 
