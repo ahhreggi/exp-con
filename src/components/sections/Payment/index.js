@@ -4,6 +4,7 @@ import "./index.scss";
 import Nav from "../../Nav";
 import Button from "../../Button";
 import RadioButton from "./RadioButton";
+import InputField from "./InputField";
 
 const Payment = (props) => {
 
@@ -12,11 +13,26 @@ const Payment = (props) => {
   };
 
   const [state, setState] = useState({
-    plan: null
+    plan: null,
+    fullName: "",
+    billingAddress: "",
+    city: "",
+    postalCode: "",
+    country: "",
+    cardholderName: "",
+    cardNumber: "",
+    expiryMonth: "",
+    expiryYear: "",
+    cvv: ""
   });
 
   const selectPlan = (plan) => {
     setState({ ...state, plan: plan });
+  };
+
+  const updateField = (field, value) => {
+    setState({ ...state, [field]: value });
+    console.log(state);
   };
 
   return (
@@ -59,13 +75,19 @@ const Payment = (props) => {
           <div className="step-two">
             <h3>2. Billing Information</h3>
             <div className="fields">
-
+              <InputField label="Full Name" field="fullName" value={state.fullName} onChange={updateField} />
+              <InputField label="Billing Address" field="billingAddress" value={state.billingAddress} onChange={updateField} />
+              <InputField label="City" field="city" value={state.city} onChange={updateField} />
+              <InputField label="Postal Code" field="postalCode" value={state.postalCode} onChange={updateField} />
+              <InputField label="Country" field="country" value={state.country} onChange={updateField} dropdown={true} />
             </div>
           </div>
           <div className="step-three">
             <h3>3. Credit Card Information</h3>
             <div className="fields">
-
+              <InputField label="Cardholder's Name" field="cardholderName" value={state.cardholderName} onChange={updateField} />
+              <InputField label="Card Number" field="cardNumber" value={state.cardNumber} onChange={updateField} />
+              <InputField label="CVV" field="cvv" value={state.cvv} onChange={updateField} />
             </div>
           </div>
         </div>
