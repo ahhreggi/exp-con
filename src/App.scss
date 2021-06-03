@@ -4,4 +4,26 @@
   background-color: $grey;
   @include flex-center;
   flex-direction: column;
+
+  .view-pricing {
+    .Perks {
+      background-color: $red;
+      .Nav {
+        .Button {
+          display: none;
+        }
+      }
+      .PerkItem {
+        .line {
+          border-color: $white;
+        }
+        h2 {
+          color: $white;
+        }
+        h3 {
+          color: $black;
+        }
+      }
+    }
+  }
 }

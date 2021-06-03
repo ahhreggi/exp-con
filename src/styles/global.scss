@@ -2,6 +2,11 @@
 @import "variables";
 @import "mixins";
 
+.line {
+  width: 8rem;
+  border-bottom: 0.2rem solid;
+  margin-bottom: 1rem;
+}
 .color-red {
   color: $red
 }

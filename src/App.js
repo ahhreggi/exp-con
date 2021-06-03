@@ -5,6 +5,7 @@ import Yellow from "./components/sections/Yellow";
 import Perks from "./components/sections/Perks";
 import Reviews from "./components/sections/Reviews";
 import Get from "./components/sections/Get";
+import Pricing from "./components/sections/Pricing";
 import Footer from "./components/Footer";
 import "./App.scss";
 
@@ -16,6 +17,7 @@ const App = () => {
 
   // Set the current view
   const setView = (view) => {
+    window.scrollTo({top: 0});
     setState({ ...state, view: view });
   };
 
@@ -23,18 +25,21 @@ const App = () => {
     <div className="App">
 
       {state.view === "main" &&
-        <>
+        <div className="view-main">
           <Hero setView={setView} />
           <Red setView={setView} />
           <Yellow setView={setView} />
           <Perks setView={setView} />
           <Reviews setView={setView} />
           <Get setView={setView} />
-        </>
+        </div>
       }
 
       {state.view === "pricing" &&
-        <div>PRICING</div>
+        <div className="view-pricing">
+          <Pricing setView={setView} />
+          <Perks setView={setView} />
+        </div>
       }
 
       <Footer />
