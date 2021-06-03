@@ -25,7 +25,7 @@ const ReviewItem = (props) => {
         {props.author.toUpperCase()}
       </h2>
       <h3>
-        {`"${props.text}"`}
+        &ldquo;{props.text}&rdquo;
       </h3>
     </div>
   );
