@@ -4,7 +4,6 @@
   background-color: $grey;
   @include flex-center;
   flex-direction: column;
-
   .view-pricing {
     .Perks {
       background-color: $red;
@@ -26,7 +25,6 @@
       }
     }
   }
-
   :not(.view-pricing) .Perks,
   .Get,
   .Pricing {
@@ -37,19 +35,44 @@
     .nav-item:hover {
       color: $grey;
     }
+    .nav-left.active {
+      i,
+      h2 {
+        color: $white;
+      }
+    }
   }
   .Yellow {
     .nav-item.active,
     .nav-item:hover {
       color: $yellow;
     }
+    .nav-left.active {
+      i,
+      h2 {
+        color: $yellow;
+      }
+    }
   }
-
   .Hero,
   .Reviews {
     .nav-item.active,
     .nav-item:hover {
       color: $blue;
+    }
+    .nav-left.active {
+      i,
+      h2 {
+        color: $blue;
+      }
+    }
+  }
+  .Payment {
+    .Nav {
+      i,
+      h2 {
+        color: $black;
+      }
     }
   }
 }

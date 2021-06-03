@@ -42,7 +42,7 @@ const PricingItem = (props) => {
       </div>
 
       {/* Payments Link */}
-      <Button text={"SELECT"} styles={"bg-" + props.styles} onClick={() => props.setView("payments")} />
+      <Button text={"SELECT"} styles={"bg-" + props.styles} onClick={() => props.setView("payment")} />
 
     </div>
   );

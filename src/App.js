@@ -6,13 +6,14 @@ import Perks from "./components/sections/Perks";
 import Reviews from "./components/sections/Reviews";
 import Get from "./components/sections/Get";
 import Pricing from "./components/sections/Pricing";
+import Payment from "./components/sections/Payment";
 import Footer from "./components/Footer";
 import "./App.scss";
 
 const App = () => {
 
   const [state, setState] = useState({
-    view: "main" // main, pricing
+    view: "main" // main, pricing, payment
   });
 
   // Set the current view
@@ -59,6 +60,12 @@ const App = () => {
           <Pricing setView={setView} />
           <div ref={perksPricing} />
           <Perks setView={setView} />
+        </div>
+      }
+
+      {state.view === "payment" &&
+        <div className="view-payment">
+          <Payment setView={setView} />
         </div>
       }
 

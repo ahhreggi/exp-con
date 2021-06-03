@@ -4,7 +4,7 @@ const PerkItem = (props) => {
 
   PerkItem.propTypes = {
     title: PropTypes.string,
-    text: PropTypes.text,
+    text: PropTypes.string,
     styles: PropTypes.string
   };
 
