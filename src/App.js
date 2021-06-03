@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Hero from "./components/sections/Hero";
 import Red from "./components/sections/Red";
 import Yellow from "./components/sections/Yellow";
@@ -13,14 +13,36 @@ import "./App.scss";
 const App = () => {
 
   const [state, setState] = useState({
-    view: "main" // main, pricing, payment
+    view: "main", // main, pricing, payment
   });
+
+  const [image, setImage] = useState(1);
+
+  let timer;
+  // Default slideshow timer
+  useEffect(() => {
+    if (state.view === "main") {
+      timer = setTimeout(() => {
+        const nextImage = image === 3 ? 1 : image + 1;
+        setImage(nextImage);
+      }, 3000);
+    }
+  }, [state.view, image]);
+
+  // Stop the current slideshow timer when a new image is selected
+  const selectImage = (newImage) => {
+    clearTimeout(timer);
+    setImage(newImage);
+  };
 
   // Set the current view
   const setView = (view) => {
     if (view === "perks") {
       scrollTo("perks");
     } else {
+      if (state.view !== "main") {
+        clearTimeout(timer);
+      }
       window.scrollTo({ top: 0 });
       setState({ ...state, view: view });
     }
@@ -51,7 +73,7 @@ const App = () => {
 
       {state.view === "main" &&
         <div className="view-main">
-          <Hero setView={setView} view={state.view} />
+          <Hero image={image} onClick={selectImage} setView={setView} view={state.view} />
           <Red setView={setView} />
           <Yellow setView={setView} />
           <div ref={perks} />

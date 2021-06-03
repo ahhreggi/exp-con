@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
 import "./index.scss";
 import Button from "../../Button";
 import Nav from "../../Nav";
@@ -13,33 +12,14 @@ const images = {
 const Hero = (props) => {
 
   Hero.propTypes = {
+    image: PropTypes.number,
+    onClick: PropTypes.func,
     setView: PropTypes.func,
-    view: PropTypes
-  };
-
-  const [state, setState] = useState({
-    image: 1
-  });
-
-  let timer;
-  // Default slideshow timer
-  useEffect(() => {
-    if (props.view === "main") {
-      timer = setTimeout(() => {
-        const nextImage = state.image === 3 ? 1 : state.image + 1;
-        setState({ ...state, image: nextImage});
-      }, 10000);
-    }
-  }, [state.image]);
-
-  // Stop the current slideshow timer when an image is manually selected
-  const selectImage = (image) => {
-    clearTimeout(timer);
-    setState({ image: image });
+    view: PropTypes.string
   };
 
   return (
-    <div className="Hero" style={{backgroundImage: `url(${images[state.image]})`}}>
+    <div className="Hero" style={{backgroundImage: `url(${images[props.image]})`}}>
 
       {/* Nav Bar */}
       <Nav setView={props.setView} section="info" />
@@ -57,16 +37,16 @@ const Hero = (props) => {
       {/* Slideshow Controls */}
       <div className="controls">
         <div
-          className={`control-button ${state.image === 1 ? "selected" : ""}`}
-          onClick={() => selectImage(1)}
+          className={`control-button ${props.image === 1 ? "selected" : ""}`}
+          onClick={() => props.onClick(1)}
         />
         <div
-          className={`control-button ${state.image === 2 ? "selected" : ""}`}
-          onClick={() => selectImage(2)}
+          className={`control-button ${props.image === 2 ? "selected" : ""}`}
+          onClick={() => props.onClick(2)}
         />
         <div
-          className={`control-button ${state.image === 3 ? "selected" : ""}`}
-          onClick={() => selectImage(3)}
+          className={`control-button ${props.image === 3 ? "selected" : ""}`}
+          onClick={() => props.onClick(3)}
         />
       </div>
 
