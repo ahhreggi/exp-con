@@ -13,7 +13,7 @@ import "./App.scss";
 const App = () => {
 
   const [state, setState] = useState({
-    view: "main" // main, pricing, payment
+    view: "main", // main, pricing, payment
   });
 
   const [image, setImage] = useState(1);
@@ -37,6 +37,7 @@ const App = () => {
 
   // Set the current view
   const setView = (view) => {
+    pauseAudio();
     if (view === "perks") {
       scrollTo("perks");
     } else {
