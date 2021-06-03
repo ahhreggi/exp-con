@@ -19,13 +19,13 @@ const App = () => {
   const [image, setImage] = useState(1);
 
   let timer;
-  // Default slideshow timer
+  // Slideshow timer
   useEffect(() => {
     if (state.view === "main") {
       timer = setTimeout(() => {
         const nextImage = image === 3 ? 1 : image + 1;
         setImage(nextImage);
-      }, 3000);
+      }, 10000);
     }
   }, [state.view, image]);
 
@@ -71,9 +71,10 @@ const App = () => {
   return (
     <div className="App">
 
+      {/* Main Info Page */}
       {state.view === "main" &&
         <div className="view-main">
-          <Hero image={image} onClick={selectImage} setView={setView} view={state.view} />
+          <Hero imageID={image} onClick={selectImage} setView={setView} view={state.view} />
           <Red setView={setView} />
           <Yellow setView={setView} />
           <div ref={perks} />
@@ -83,6 +84,7 @@ const App = () => {
         </div>
       }
 
+      {/* Pricing Page */}
       {state.view === "pricing" &&
         <div className="view-pricing">
           <Pricing setView={setView} />
@@ -91,6 +93,7 @@ const App = () => {
         </div>
       }
 
+      {/* Payment Page */}
       {state.view === "payment" &&
         <div className="view-payment">
           <Payment setView={setView} />

@@ -12,14 +12,14 @@ const images = {
 const Hero = (props) => {
 
   Hero.propTypes = {
-    image: PropTypes.number,
+    imageID: PropTypes.number,
     onClick: PropTypes.func,
     setView: PropTypes.func,
     view: PropTypes.string
   };
 
   return (
-    <div className="Hero" style={{backgroundImage: `url(${images[props.image]})`}}>
+    <div className="Hero" style={{backgroundImage: `url(${images[props.imageID]})`}}>
 
       {/* Nav Bar */}
       <Nav setView={props.setView} section="info" />
@@ -37,15 +37,15 @@ const Hero = (props) => {
       {/* Slideshow Controls */}
       <div className="controls">
         <div
-          className={`control-button ${props.image === 1 ? "selected" : ""}`}
+          className={`control-button ${props.imageID === 1 ? "selected" : ""}`}
           onClick={() => props.onClick(1)}
         />
         <div
-          className={`control-button ${props.image === 2 ? "selected" : ""}`}
+          className={`control-button ${props.imageID === 2 ? "selected" : ""}`}
           onClick={() => props.onClick(2)}
         />
         <div
-          className={`control-button ${props.image === 3 ? "selected" : ""}`}
+          className={`control-button ${props.imageID === 3 ? "selected" : ""}`}
           onClick={() => props.onClick(3)}
         />
       </div>
