@@ -34,13 +34,13 @@ const Nav = (props) => {
         </div>
         <div className="menu">
           <div className={`nav-item ${props.section === "info" ? "active" : ""}`}>
-            <h1>WHAT IS IT</h1>
+            <h1 onClick={() => props.setView("main")}>WHAT IS IT</h1>
           </div>
           <div className={`nav-item ${props.section === "perks" ? "active" : ""}`}>
-            <h1>PERKS</h1>
+            <h1 onClick={() => props.setView("perks")}>PERKS</h1>
           </div>
           <div className={`nav-item ${props.section === "pricing" ? "active" : ""}`}>
-            <h1>PRICING</h1>
+            <h1 onClick={() => props.setView("pricing")}>PRICING</h1>
           </div>
         </div>
       </div>
