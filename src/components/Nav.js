@@ -8,7 +8,8 @@ const Nav = (props) => {
   Nav.propTypes = {
     showButton: PropTypes.bool,
     styles: PropTypes.string,
-    setView: PropTypes.func
+    setView: PropTypes.func,
+    section: PropTypes.string
   };
 
   Nav.defaultProps = {
@@ -32,13 +33,13 @@ const Nav = (props) => {
         <div className="nav-bg">
         </div>
         <div className="menu">
-          <div className="nav-item">
+          <div className={`nav-item ${props.section === "info" ? "active" : ""}`}>
             <h1>WHAT IS IT</h1>
           </div>
-          <div className="nav-item">
+          <div className={`nav-item ${props.section === "perks" ? "active" : ""}`}>
             <h1>PERKS</h1>
           </div>
-          <div className="nav-item">
+          <div className={`nav-item ${props.section === "pricing" ? "active" : ""}`}>
             <h1>PRICING</h1>
           </div>
         </div>

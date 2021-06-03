@@ -7,7 +7,8 @@ import speaker from "../../../images/speaker2.png";
 const Reviews = (props) => {
 
   Reviews.propTypes = {
-    setView: PropTypes.func
+    setView: PropTypes.func,
+    view: PropTypes.string
   };
 
   const fillerText = "Love it, it's the best. I can't live without it!";
@@ -46,7 +47,7 @@ const Reviews = (props) => {
     <div className="Reviews">
 
       {/* Nav Bar */}
-      <Nav showButton={true} styles="color-blue" setView={props.setView} />
+      <Nav showButton={true} styles="color-blue" setView={props.setView} section="info" />
 
       {/* Main Content */}
       <main>

@@ -6,14 +6,15 @@ import Button from "../../Button";
 const Get = (props) => {
 
   Get.propTypes = {
-    setView: PropTypes.func
+    setView: PropTypes.func,
+    view: PropTypes.string
   };
 
   return (
     <div className="Get">
 
       {/* Nav Bar */}
-      <Nav />
+      <Nav setView={props.setView} view={props.view} />
 
       {/* Main Content */}
       <main>

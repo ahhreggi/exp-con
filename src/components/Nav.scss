@@ -23,6 +23,7 @@
     height: 40rem;
     width: 40rem;
     overflow: hidden;
+    transition: 0.5s;
     .nav-bg {
       position: absolute;
       margin-top: -10rem;
@@ -48,14 +49,16 @@
         margin: 0.3rem 0;
         padding: 0;
         line-height: 4rem;
-        &:hover {
-          cursor: pointer;
-          color: $red;
-        }
       }
+      &.active,
+      &:hover {
+        cursor: pointer;
+        color: $red;
+      }
+
     }
     &.hidden {
-      // display: none;
+      display: none;
     }
   }
   section.nav-left {
