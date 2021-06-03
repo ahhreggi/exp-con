@@ -6,6 +6,7 @@
   @include flex-center;
   justify-content: space-between;
   min-height: 8rem;
+  user-select: none;
   i {
     color: $white;
     font-size: 3.3rem;
@@ -31,7 +32,7 @@
       height: 45rem;
       width: 45rem;
       border-radius: 100%;
-      background: $grey;
+      background: $black;
       z-index: 1;
     }
     .menu {

@@ -18,6 +18,14 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: $white;
+  &:hover {
+    color: $yellow;
+  }
+}
+
 h1,
 h2,
 h3 {
