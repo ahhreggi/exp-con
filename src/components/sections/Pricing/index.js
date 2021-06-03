@@ -9,8 +9,6 @@ const Pricing = (props) => {
     setView: PropTypes.func
   };
 
-  const fillerText = "No commitment, cancel anytime. Never worry about forgetting a payment again!";
-
   const pricingData = [
     {
       package: "Basic",
@@ -75,7 +73,7 @@ const Pricing = (props) => {
     <div className="Pricing">
 
       {/* Nav Bar */}
-      <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
+      <Nav />
 
       {/* Main Content */}
       <main>

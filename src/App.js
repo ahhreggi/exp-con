@@ -17,6 +17,7 @@ const App = () => {
 
   // Set the current view
   const setView = (view) => {
+    window.scrollTo({top: 0});
     setState({ ...state, view: view });
   };
 
@@ -24,18 +25,21 @@ const App = () => {
     <div className="App">
 
       {state.view === "main" &&
-        <>
+        <div className="view-main">
           <Hero setView={setView} />
           <Red setView={setView} />
           <Yellow setView={setView} />
           <Perks setView={setView} />
           <Reviews setView={setView} />
           <Get setView={setView} />
-        </>
+        </div>
       }
 
       {state.view === "pricing" &&
-        <Pricing setView={setView} />
+        <div className="view-pricing">
+          <Pricing setView={setView} />
+          <Perks setView={setView} />
+        </div>
       }
 
       <Footer />
