@@ -26,6 +26,7 @@ const App = () => {
     }
   };
 
+  // Scroll ref handler
   const scrollTo = (refName) => {
     if (refName === "perks") {
       if (state.view === "main") {
@@ -50,7 +51,7 @@ const App = () => {
 
       {state.view === "main" &&
         <div className="view-main">
-          <Hero setView={setView} />
+          <Hero setView={setView} view={state.view} />
           <Red setView={setView} />
           <Yellow setView={setView} />
           <div ref={perks} />

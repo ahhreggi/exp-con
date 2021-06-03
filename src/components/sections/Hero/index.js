@@ -13,20 +13,23 @@ const images = {
 const Hero = (props) => {
 
   Hero.propTypes = {
-    setView: PropTypes.func
+    setView: PropTypes.func,
+    view: PropTypes
   };
 
   const [state, setState] = useState({
     image: 1
   });
 
-  // Default slideshow timer
   let timer;
+  // Default slideshow timer
   useEffect(() => {
-    timer = setTimeout(() => {
-      const nextImage = state.image === 3 ? 1 : state.image + 1;
-      setState({ ...state, image: nextImage});
-    }, 10000);
+    if (props.view === "main") {
+      timer = setTimeout(() => {
+        const nextImage = state.image === 3 ? 1 : state.image + 1;
+        setState({ ...state, image: nextImage});
+      }, 10000);
+    }
   }, [state.image]);
 
   // Stop the current slideshow timer when an image is manually selected
