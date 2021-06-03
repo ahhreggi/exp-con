@@ -45,7 +45,7 @@ const Perks = (props) => {
     <div className="Perks">
 
       {/* Nav Bar */}
-      <Nav showButton={true} styles="bg-rainbow" setView={props.setView} />
+      <Nav showButton={true} styles="bg-rainbow" setView={props.setView} section="perks" />
 
       {/* Main Content */}
       <main>

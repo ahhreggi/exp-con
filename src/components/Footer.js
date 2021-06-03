@@ -12,8 +12,10 @@ const Footer = () => {
 
       <div className="contact">
         <span>
-          <i className="fa fa-envelope" />
-          support@experienceconcerts.co
+          <a href="mailto:support@experienceconcerts.co">
+            <i className="fa fa-envelope" />
+            support@experienceconcerts.co
+          </a>
         </span>
       </div>
 

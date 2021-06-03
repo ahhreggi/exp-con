@@ -1,5 +1,9 @@
 @import "./styles/global.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: $font-main;
@@ -12,6 +16,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  &:hover {
+    color: $yellow;
+  }
 }
 
 h1,

@@ -13,7 +13,7 @@ const Yellow = (props) => {
     <div className="Yellow">
 
       {/* Nav Bar */}
-      <Nav showButton={true} styles="color-yellow" setView={props.setView} />
+      <Nav showButton={true} styles="color-yellow" setView={props.setView} section="info" />
 
       {/* Main Content */}
       <main>

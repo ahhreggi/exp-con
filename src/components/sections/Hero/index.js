@@ -39,7 +39,7 @@ const Hero = (props) => {
     <div className="Hero" style={{backgroundImage: `url(${images[state.image]})`}}>
 
       {/* Nav Bar */}
-      <Nav setView={props.setView} />
+      <Nav setView={props.setView} section="info" />
 
       {/* Main Content */}
       <main>
@@ -54,15 +54,15 @@ const Hero = (props) => {
       {/* Slideshow Controls */}
       <div className="controls">
         <div
-          className={`control-button ${state.image === 1 ? "active" : ""}`}
+          className={`control-button ${state.image === 1 ? "selected" : ""}`}
           onClick={() => selectImage(1)}
         />
         <div
-          className={`control-button ${state.image === 2 ? "active" : ""}`}
+          className={`control-button ${state.image === 2 ? "selected" : ""}`}
           onClick={() => selectImage(2)}
         />
         <div
-          className={`control-button ${state.image === 3 ? "active" : ""}`}
+          className={`control-button ${state.image === 3 ? "selected" : ""}`}
           onClick={() => selectImage(3)}
         />
       </div>

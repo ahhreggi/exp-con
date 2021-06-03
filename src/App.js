@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Hero from "./components/sections/Hero";
 import Red from "./components/sections/Red";
 import Yellow from "./components/sections/Yellow";
@@ -17,9 +17,27 @@ const App = () => {
 
   // Set the current view
   const setView = (view) => {
-    window.scrollTo({top: 0});
-    setState({ ...state, view: view });
+    if (view === "perks") {
+      scrollTo("perks");
+    } else {
+      window.scrollTo({ top: 0 });
+      setState({ ...state, view: view });
+    }
   };
+
+  const scrollTo = (refName) => {
+    if (refName === "perks") {
+      if (state.view === "main") {
+        perks.current.scrollIntoView();
+      } else if (state.view === "pricing") {
+        perksPricing.current.scrollIntoView();
+      }
+    }
+  };
+
+  // Scroll refs
+  const perks = useRef(null);
+  const perksPricing = useRef(null);
 
   return (
     <div className="App">
@@ -29,6 +47,7 @@ const App = () => {
           <Hero setView={setView} />
           <Red setView={setView} />
           <Yellow setView={setView} />
+          <div ref={perks} />
           <Perks setView={setView} />
           <Reviews setView={setView} />
           <Get setView={setView} />
@@ -38,6 +57,7 @@ const App = () => {
       {state.view === "pricing" &&
         <div className="view-pricing">
           <Pricing setView={setView} />
+          <div ref={perksPricing} />
           <Perks setView={setView} />
         </div>
       }

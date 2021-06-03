@@ -73,7 +73,7 @@ const Pricing = (props) => {
     <div className="Pricing">
 
       {/* Nav Bar */}
-      <Nav />
+      <Nav setView={props.setView} section="pricing" />
 
       {/* Main Content */}
       <main>
