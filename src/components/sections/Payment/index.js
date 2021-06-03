@@ -34,6 +34,23 @@ const Payment = (props) => {
     setState({ ...state, [field]: value });
   };
 
+  const handleSubmit = () => {
+    const data = {
+      "plan": state.plan,
+      "full_name": state.fullName,
+      "billing_address": state.billingAddress,
+      "city": state.city,
+      "postal_code": state.postalCode,
+      "country": state.country,
+      "cardholderName": state.cardholderName,
+      "cardNumber": state.cardNumber,
+      "expiry_month": state.expiryMonth,
+      "expiry_year": state.expiryYear,
+      "cvv": state.cvv
+    };
+    console.log(data);
+  };
+
   const countries = ["United States", "Canada", "Mexico"];
   const expiryMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
   const expiryYears = ["2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030"];
@@ -105,7 +122,7 @@ const Payment = (props) => {
           <div>
             By continuing, I acknowledge that I&apos;ve read and agree to the <a href="">Terms of Service</a> & <a href="">Privacy Policy</a>.
           </div>
-          <Button text="DOWNLOAD" styles="bg-rainbow" />
+          <Button text="DOWNLOAD" styles="bg-rainbow" onClick={handleSubmit} />
         </div>
 
       </main>
