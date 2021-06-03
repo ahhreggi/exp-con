@@ -37,6 +37,7 @@ const App = () => {
 
   // Set the current view
   const setView = (view) => {
+    pauseAudio();
     if (view === "perks") {
       scrollTo("perks");
     } else {
@@ -68,6 +69,16 @@ const App = () => {
   const perks = useRef(null);
   const perksPricing = useRef(null);
 
+
+  let audio = new Audio("/explore.mp3");
+  const playAudio = () => {
+    audio.play();
+  };
+  const pauseAudio = () => {
+    audio.pause();
+  };
+
+
   return (
     <div className="App">
 
@@ -75,7 +86,7 @@ const App = () => {
       {state.view === "main" &&
         <div className="view-main">
           <Hero imageID={image} onClick={selectImage} setView={setView} view={state.view} />
-          <Red setView={setView} />
+          <Red setView={setView} onPlay={() => playAudio()} onPause={() => pauseAudio()} />
           <Yellow setView={setView} />
           <div ref={perks} />
           <Perks setView={setView} />

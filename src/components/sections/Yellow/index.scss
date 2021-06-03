@@ -8,6 +8,9 @@
   min-height: 100vh;
   background-color: $yellow;
   box-shadow: inset 0rem 0rem 0rem 5rem $yellow;
+  .Nav {
+    z-index: 4;
+  }
   main {
     @include flex-center;
     justify-content: space-between;
