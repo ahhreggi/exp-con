@@ -35,6 +35,10 @@ const Payment = (props) => {
     console.log(state);
   };
 
+  const countries = ["United States", "Canada", "Mexico"];
+  const expiryMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+  const expiryYears = ["2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030"];
+
   return (
     <div className="Payment">
 
@@ -79,7 +83,7 @@ const Payment = (props) => {
               <InputField label="Billing Address" field="billingAddress" value={state.billingAddress} onChange={updateField} />
               <InputField label="City" field="city" value={state.city} onChange={updateField} />
               <InputField label="Postal Code" field="postalCode" value={state.postalCode} onChange={updateField} />
-              <InputField label="Country" field="country" value={state.country} onChange={updateField} dropdown={true} />
+              <InputField label="Country" field="country" value={state.country} onChange={updateField} dropdown={true} options={countries} />
             </div>
           </div>
           <div className="step-three">
@@ -87,6 +91,8 @@ const Payment = (props) => {
             <div className="fields">
               <InputField label="Cardholder's Name" field="cardholderName" value={state.cardholderName} onChange={updateField} />
               <InputField label="Card Number" field="cardNumber" value={state.cardNumber} onChange={updateField} />
+              <InputField label="Expiry Month" field="expiryMonth" value={state.country} onChange={updateField} dropdown={true} options={expiryMonths} />
+              <InputField label="Expiry Year" field="expiryMonth" value={state.country} onChange={updateField} dropdown={true} options={expiryYears} />
               <InputField label="CVV" field="cvv" value={state.cvv} onChange={updateField} />
             </div>
           </div>
