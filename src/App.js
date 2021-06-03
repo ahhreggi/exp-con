@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Hero from "./components/sections/Hero";
 import Red from "./components/sections/Red";
+import Yellow from "./components/sections/Yellow";
 import Perks from "./components/sections/Perks";
 import Reviews from "./components/sections/Reviews";
 import Get from "./components/sections/Get";
@@ -25,6 +26,7 @@ const App = () => {
         <>
           <Hero setView={setView} />
           <Red setView={setView} />
+          <Yellow setView={setView} />
           <Perks setView={setView} />
           <Reviews setView={setView} />
           <Get setView={setView} />
