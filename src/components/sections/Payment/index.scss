@@ -4,8 +4,49 @@
   min-width: 100vw;
   min-height: 100vh;
   @include flex-center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  justify-content: space-between;
   color: $black;
-  background-color: $grey;
+  background-color: $white;
+
+  main {
+    border: 1px solid red;
+    width: 80%;
+    margin: auto;
+    h1 {
+      margin-bottom: 3rem;
+    }
+    .container {
+      @include flex-center;
+      justify-content: space-between;
+      border: 1px solid orange;
+    }
+    .step-one {
+      margin-bottom: 5rem;
+    }
+    .step-two,
+    .step-three {
+      border: 1px solid red;
+      width: 47%;
+    }
+    .plans {
+      border: 1px solid blue;
+      width: 47%;
+      height: 4rem;
+    }
+    .fields {
+      border: 1px solid green;
+      min-height: 4rem;
+    }
+    .submit {
+      margin-top: 5rem;
+      width: 47%;
+      a {
+        color: $purple;
+        font-weight: 800;
+      }
+    }
+  }
+
 }
