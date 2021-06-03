@@ -70,6 +70,12 @@
     .fa-bars {
       cursor: pointer;
     }
+    &.active {
+      i,
+      h2 {
+        color: $red;
+      }
+    }
   }
   section.nav-right {
     margin-right: 4rem;

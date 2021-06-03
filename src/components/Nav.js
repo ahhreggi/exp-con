@@ -49,7 +49,7 @@ const Nav = (props) => {
           </div>
         </div>
       </div>
-      <section className="nav-left">
+      <section className={`nav-left ${state.showMenu ? "active" : ""}`}>
         <i className="fa fa-bars" onClick={() => toggleMenu()} />
         <h2>EXP | CON</h2>
       </section>

@@ -18,6 +18,9 @@ const Payment = (props) => {
       {/* Main Content */}
       <main>
 
+        {/* Section Header */}
+        <div className="text">PAYMENT</div>
+
       </main>
 
     </div>
