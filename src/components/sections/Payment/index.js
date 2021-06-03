@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./index.scss";
-import Nav from "./Nav";
+import Nav from "../../Nav";
 
 const Payment = (props) => {
 
@@ -21,7 +21,7 @@ const Payment = (props) => {
       </main>
 
     </div>
-  )
-}
+  );
+};
 
-export default Payment
+export default Payment;
