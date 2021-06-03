@@ -20,14 +20,14 @@ const Red = (props) => {
       <main>
 
         {/* Section Text */}
-        <section className="left">
+        <section className="demo-text">
           <h1>SUPERIOR SOUND</h1>
           <h2>Experience live versions of your favourite songs.</h2>
           <Button text="SEE DEMO" styles="large color-red" />
         </section>
 
         {/* Interactive Area */}
-        <section className="right">
+        <section className="demo-interactive">
           <div className="speaker">
             <img src={speaker} />
           </div>

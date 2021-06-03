@@ -32,3 +32,15 @@
 .bg-red {
   background-color: $red;
 }
+
+section.demo-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+section.demo-interactive {
+  margin-left: 3rem;
+  padding-bottom: 8rem;
+  @include flex-center;
+  align-items: flex-start;
+}
