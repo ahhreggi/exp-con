@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const ReviewItem = (props) => {
+
   ReviewItem.propTypes = {
     rating: PropTypes.number,
     author: PropTypes.string,
@@ -20,13 +21,20 @@ const ReviewItem = (props) => {
 
   return (
     <div className="ReviewItem">
+
+      {/* Ratings */}
       {stars}
+
+      {/* Author */}
       <h2>
         {props.author.toUpperCase()}
       </h2>
+
+      {/* Quote */}
       <h3>
         &ldquo;{props.text}&rdquo;
       </h3>
+
     </div>
   );
 };

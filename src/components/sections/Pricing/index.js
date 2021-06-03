@@ -66,6 +66,7 @@ const Pricing = (props) => {
         price={item.price}
         info={item.info}
         styles={item.styles}
+        setView={props.setView}
       />
     );
   });
@@ -80,8 +81,9 @@ const Pricing = (props) => {
       <main>
 
         {/* Section Text */}
-        <div className="title">
+        <div className="text">
           <h1>PRICING</h1>
+          <h2>Test out our app today! Choose from three subscription-based payment models.</h2>
         </div>
 
         {/* PricingItem Components */}

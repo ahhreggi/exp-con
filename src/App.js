@@ -5,6 +5,7 @@ import Yellow from "./components/sections/Yellow";
 import Perks from "./components/sections/Perks";
 import Reviews from "./components/sections/Reviews";
 import Get from "./components/sections/Get";
+import Pricing from "./components/sections/Pricing";
 import Footer from "./components/Footer";
 import "./App.scss";
 
@@ -34,7 +35,7 @@ const App = () => {
       }
 
       {state.view === "pricing" &&
-        <div>PRICING</div>
+        <Pricing setView={setView} />
       }
 
       <Footer />
