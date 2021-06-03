@@ -29,9 +29,14 @@ const App = () => {
   const scrollTo = (refName) => {
     if (refName === "perks") {
       if (state.view === "main") {
-        perks.current.scrollIntoView();
+        perks.current.scrollIntoView({ behavior: "smooth" });
       } else if (state.view === "pricing") {
-        perksPricing.current.scrollIntoView();
+        perksPricing.current.scrollIntoView({ behavior: "smooth" });
+      } else if (state.view === "payment") {
+        setView("main");
+        setTimeout(() => {
+          perks.current.scrollIntoView({ behavior: "smooth" });
+        }, 10);
       }
     }
   };
