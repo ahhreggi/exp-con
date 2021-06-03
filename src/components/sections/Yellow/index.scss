@@ -7,6 +7,13 @@
   min-width: 100vw;
   min-height: 100vh;
   background-color: $yellow;
+  // background-image: url("https://images.unsplash.com/photo-1588033257885-e4b9b267d46d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnQlMjB1cCUyMGNsb3NlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: left;
+  // overflow: hidden;
+  box-shadow: inset 0rem 0rem 0rem 5rem $yellow;
+
   main {
     @include flex-center;
     justify-content: space-between;
@@ -23,6 +30,52 @@
     }
   }
   section.demo-interactive {
-    filter: none
+    filter: none;
+    // position: absolute;
+    // border: 1px solid red;
+    height: 100%;
+    width: 50%;
+    margin-left: 0;
+    overflow: hidden;
+    .circle1 {
+      height: 40rem;
+      width: 40rem;
+      border-radius: 100%;
+      // position: absolute;
+      margin-top: 2rem;
+      // margin-left: 15rem;
+
+      background-image: url("https://images.unsplash.com/photo-1588033257885-e4b9b267d46d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmNlcnQlMjB1cCUyMGNsb3NlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: -10rem;
+    }
+    .reveal1 {
+      position: absolute;
+      z-index: 2;
+      margin-top: 7rem;
+      margin-right: 7rem;
+    }
+    .cover1 {
+      height: 55rem;
+      width: 55rem;
+      border-radius: 100%;
+      position: absolute;
+      margin-top: -5rem;
+      box-shadow: inset -5rem 0rem 0rem 15rem $yellow;
+      border-radius: 100%;
+      &.show {
+        box-shadow: none;
+      }
+    }
+    .Button {
+      z-index: 2;
+
+      margin-left: 15rem;
+    }
+  }
+  section.demo-text {
+    margin-top: 5rem;
+    z-index: 2;
   }
 }
