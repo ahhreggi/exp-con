@@ -3,7 +3,7 @@
 <img src="public/music.png" width="150px">
 <p>
 <h1>EXP | CON</h1>
-<p>Demo project for Sheer Technologies Inc.
+<p>Demo project for Speer Technologies Inc.
 </p>
 
 <p>Built with <a href="https://reactjs.org/">ReactJS</a> and hosted with <a href="https://www.netlify.com/">Netlify</a></p>
