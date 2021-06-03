@@ -1,3 +1,4 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import Button from "../../Button";
 import Nav from "../../Nav";
@@ -7,7 +8,23 @@ import "./index.scss";
 const Red = (props) => {
 
   Red.propTypes = {
-    setView: PropTypes.func
+    setView: PropTypes.func,
+    onPlay: PropTypes.func,
+    onPause: PropTypes.func
+  };
+
+  const [state, setState] = useState({
+    playAudio: false
+  });
+
+  const toggleAudio = () => {
+    if (state.playAudio) {
+      props.onPause();
+      setState({ playAudio: false });
+    } else {
+      props.onPlay();
+      setState({ playAudio: true });
+    }
   };
 
   return (
@@ -34,7 +51,7 @@ const Red = (props) => {
           <div className="speaker">
             <img src={speaker} />
           </div>
-          <Button text="CLICK" styles="circle" />
+          <Button text={state.playAudio ? "STOP" : "CLICK"} styles="circle" onClick={() => toggleAudio()} />
         </section>
 
       </main>
