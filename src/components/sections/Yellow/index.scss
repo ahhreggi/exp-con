@@ -1,12 +1,12 @@
 @import "../../../styles/global.scss";
 
-.Red {
+.Yellow {
   @include flex-center;
   justify-content: flex-start;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: $red;
+  background-color: $yellow;
   main {
     @include flex-center;
     justify-content: space-between;
